@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:gurpreetkait.in)",
+      "WebFetch(domain:www.mediafire.com)",
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)"
+    ]
+  }
+}
