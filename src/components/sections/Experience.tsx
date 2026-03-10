@@ -32,7 +32,7 @@ function ChevronIcon({ open }: { open: boolean }) {
 const BULLET_PREVIEW = 2
 
 export function Experience() {
-  const { t } = useApp()
+  const { t, language } = useApp()
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
 
   function toggleExpand(key: string) {
@@ -73,8 +73,9 @@ export function Experience() {
                 {entry.roles.map((role, roleIndex) => {
                   const expandKey = `${entryIndex}-${roleIndex}`
                   const isExpanded = expanded[expandKey]
-                  const bulletsToShow = isExpanded ? role.bullets : role.bullets.slice(0, BULLET_PREVIEW)
-                  const hasMore = role.bullets.length > BULLET_PREVIEW
+                  const bullets = role.bullets[language]
+                  const bulletsToShow = isExpanded ? bullets : bullets.slice(0, BULLET_PREVIEW)
+                  const hasMore = bullets.length > BULLET_PREVIEW
 
                   return (
                     <div key={role.title} className="flex gap-4">

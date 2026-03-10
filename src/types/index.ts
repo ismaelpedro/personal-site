@@ -7,7 +7,7 @@ export interface ExperienceRole {
   period: string
   startDate: Date
   endDate: Date | null
-  bullets: string[]
+  bullets: Record<Language, string[]>
   isCurrent: boolean
 }
 
