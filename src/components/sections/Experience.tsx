@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useApp } from '@/context/AppContext'
 import { experiences } from '@/data/experience'
 import { SectionLabel } from '@/components/ui/SectionLabel'
@@ -12,32 +11,8 @@ function BriefcaseIcon() {
   )
 }
 
-function ChevronIcon({ open }: { open: boolean }) {
-  return (
-    <svg
-      width="14" height="14"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      style={{ transform: open ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}
-    >
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
-  )
-}
-
-const BULLET_PREVIEW = 2
-
 export function Experience() {
   const { t, language } = useApp()
-  const [expanded, setExpanded] = useState<Record<string, boolean>>({})
-
-  function toggleExpand(key: string) {
-    setExpanded((prev) => ({ ...prev, [key]: !prev[key] }))
-  }
 
   return (
     <section id="experience" className="space-y-5">
@@ -70,12 +45,8 @@ export function Experience() {
               <div className="absolute left-8 top-0 bottom-0 w-px bg-foreground/10" />
 
               <div className="space-y-6">
-                {entry.roles.map((role, roleIndex) => {
-                  const expandKey = `${entryIndex}-${roleIndex}`
-                  const isExpanded = expanded[expandKey]
+                {entry.roles.map((role) => {
                   const bullets = role.bullets[language]
-                  const bulletsToShow = isExpanded ? bullets : bullets.slice(0, BULLET_PREVIEW)
-                  const hasMore = bullets.length > BULLET_PREVIEW
 
                   return (
                     <div key={role.title} className="flex gap-4">
@@ -98,24 +69,13 @@ export function Experience() {
 
                         {/* Bullets */}
                         <ul className="space-y-1.5 mb-2">
-                          {bulletsToShow.map((bullet, bi) => (
+                          {bullets.map((bullet, bi) => (
                             <li key={bi} className="flex gap-2 text-sm text-foreground/50 leading-relaxed">
                               <span className="shrink-0 mt-2 w-1 h-1 rounded-full bg-foreground/30" />
                               <span>{bullet}</span>
                             </li>
                           ))}
                         </ul>
-
-                        {/* See more / less toggle */}
-                        {hasMore && (
-                          <button
-                            onClick={() => toggleExpand(expandKey)}
-                            className="flex items-center gap-1 text-xs text-foreground/40 hover:text-foreground/70 transition-colors mt-1"
-                          >
-                            <span>{isExpanded ? t.experience.seeLess : t.experience.seeMore}</span>
-                            <ChevronIcon open={!!isExpanded} />
-                          </button>
-                        )}
                       </div>
                     </div>
                   )

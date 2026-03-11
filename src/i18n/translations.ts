@@ -90,7 +90,7 @@ export const translations: Record<Language, Translations> = {
     },
     about: {
       label: 'About',
-      bio1: 'With over 7 years of experience delivering high-impact solutions across healthcare, finance, e-commerce, fitness, and education, I specialize in building scalable, maintainable, and user-centric apps that empower users and drive real business results.',
+      bio1: 'With over 8 years of experience delivering high-impact solutions across healthcare, finance, e-commerce, fitness, and education, I specialize in building scalable, maintainable, and user-centric apps that empower users and drive real business results.',
       bio2: 'I\'ve contributed to applications with over 5 million downloads, collaborating with renowned organizations.',
       locationBody: 'Brazilian citizen based between Brazil and Spain. Holder of a Spanish Digital Nomad Visa, enabling full legal remote collaboration with European companies. Open to remote international roles and B2B contracts. Operating through a US LLC — payments can be arranged via traditional methods as well as BTC and USDT.',
     },
@@ -157,7 +157,7 @@ export const translations: Record<Language, Translations> = {
     },
     about: {
       label: 'Sobre',
-      bio1: 'Com mais de 7 anos de experiência entregando soluções de alto impacto em saúde, finanças, e-commerce, fitness e educação, sou especializado em construir apps escaláveis, de fácil manutenção e centrados no usuário.',
+      bio1: 'Com mais de 8 anos de experiência entregando soluções de alto impacto em saúde, finanças, e-commerce, fitness e educação, sou especializado em construir apps escaláveis, de fácil manutenção e centrados no usuário.',
       bio2: 'Contribuí para aplicações com mais de 5 milhões de downloads, colaborando com organizações renomadas.',
       locationBody: 'Cidadão brasileiro baseado entre Brasil e Espanha. Detentor de um Visto de Nômade Digital espanhol, permitindo colaboração remota legal com empresas europeias. Aberto a contratos internacionais remotos e B2B. Operando através de uma LLC americana — pagamentos via métodos tradicionais, BTC e USDT.',
     },
@@ -224,7 +224,7 @@ export const translations: Record<Language, Translations> = {
     },
     about: {
       label: 'Sobre mí',
-      bio1: 'Con más de 7 años de experiencia entregando soluciones de alto impacto en salud, finanzas, e-commerce, fitness y educación, me especializo en construir apps escalables, mantenibles y centradas en el usuario.',
+      bio1: 'Con más de 8 años de experiencia entregando soluciones de alto impacto en salud, finanzas, e-commerce, fitness y educación, me especializo en construir apps escalables, mantenibles y centradas en el usuario.',
       bio2: 'He contribuido a aplicaciones con más de 5 millones de descargas, colaborando con organizaciones reconocidas.',
       locationBody: 'Ciudadano brasileño basado entre Brasil y España. Titular de una Visa de Nómada Digital española, que permite colaboración remota legal con empresas europeas. Abierto a contratos internacionales remotos y B2B. Operando a través de una LLC de EE.UU. — pagos vía métodos tradicionales, BTC y USDT.',
     },
