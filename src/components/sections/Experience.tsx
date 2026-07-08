@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useApp } from '@/context/AppContext'
 import { experiences } from '@/data/experience'
 import { SectionLabel } from '@/components/ui/SectionLabel'
@@ -8,6 +9,44 @@ function BriefcaseIcon() {
       <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
       <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
     </svg>
+  )
+}
+
+function getInitials(name: string): string {
+  return name
+    .replace(/[^\p{L}\s]/gu, '')
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0]?.toUpperCase() ?? '')
+    .join('')
+}
+
+interface CompanyLogoProps { company: string; url?: string }
+
+function CompanyLogo({ company, url }: CompanyLogoProps) {
+  const [failed, setFailed] = useState(false)
+  const domain = url ? new URL(url).hostname.replace(/^www\./, '') : null
+  const showImg = domain && !failed
+
+  return (
+    <span className="w-6 h-6 rounded-md bg-foreground/5 border border-foreground/10 flex items-center justify-center overflow-hidden shrink-0">
+      {showImg ? (
+        <img
+          src={`https://www.google.com/s2/favicons?domain=${domain}&sz=64`}
+          alt={`${company} logo`}
+          width={16}
+          height={16}
+          loading="lazy"
+          className="w-4 h-4 object-contain"
+          onError={() => setFailed(true)}
+        />
+      ) : (
+        <span className="text-[9px] font-bold text-foreground/50" aria-hidden="true">
+          {getInitials(company)}
+        </span>
+      )}
+    </span>
   )
 }
 
@@ -35,8 +74,25 @@ export function Experience() {
         {experiences.map((entry, entryIndex) => (
           <div key={entry.company}>
             {/* Company name — centered separator */}
-            <div className="px-5 pt-6 pb-3 text-center">
-              <span className="text-xs font-bold tracking-widest text-foreground uppercase">{entry.company}</span>
+            <div className="px-5 pt-6 pb-3 flex items-center justify-center gap-2.5">
+              {entry.url ? (
+                <a
+                  href={entry.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2.5 hover:opacity-100 transition-opacity"
+                >
+                  <CompanyLogo company={entry.company} url={entry.url} />
+                  <span className="text-xs font-bold tracking-widest text-foreground uppercase group-hover:underline underline-offset-4 decoration-foreground/30">
+                    {entry.company}
+                  </span>
+                </a>
+              ) : (
+                <>
+                  <CompanyLogo company={entry.company} url={entry.url} />
+                  <span className="text-xs font-bold tracking-widest text-foreground uppercase">{entry.company}</span>
+                </>
+              )}
             </div>
 
             {/* Left timeline for roles */}

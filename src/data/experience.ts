@@ -114,6 +114,7 @@ export const experiences: ExperienceEntry[] = [
   },
   {
     company: 'Unimed',
+    url: 'https://www.unimed.coop.br',
     roles: [
       {
         title: 'Fullstack Engineer',
@@ -182,6 +183,7 @@ export const experiences: ExperienceEntry[] = [
   },
   {
     company: 'Genial Investments Bank',
+    url: 'https://www.genialinvestimentos.com.br',
     roles: [
       {
         title: 'Fullstack Engineer',
@@ -211,6 +213,7 @@ export const experiences: ExperienceEntry[] = [
   },
   {
     company: 'Hospital Israelita Albert Einstein',
+    url: 'https://www.einstein.br',
     roles: [
       {
         title: 'Software Engineer',
@@ -237,6 +240,7 @@ export const experiences: ExperienceEntry[] = [
   },
   {
     company: "L'Oréal",
+    url: 'https://www.loreal.com',
     roles: [
       {
         title: 'Web Developer',
