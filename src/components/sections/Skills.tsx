@@ -62,10 +62,13 @@ export function Skills() {
   const { t, language } = useApp()
 
   const skillCategories = [
-    { label: t.skills.mobile, items: skillGroups.mobile },
-    { label: t.skills.frontend, items: skillGroups.frontend },
     { label: t.skills.backend, items: skillGroups.backend },
-    { label: t.skills.devops, items: skillGroups.devops },
+    { label: t.skills.distributed, items: skillGroups.distributed },
+    { label: t.skills.databases, items: skillGroups.databases },
+    { label: t.skills.cloud, items: skillGroups.cloud },
+    { label: t.skills.architecture, items: skillGroups.architecture },
+    { label: t.skills.observability, items: skillGroups.observability },
+    { label: t.skills.frontend, items: skillGroups.frontend },
     { label: t.skills.ai, items: skillGroups.ai },
   ]
 

@@ -1,9 +1,12 @@
 export const skillGroups = {
-  mobile: ['Flutter', 'Dart', 'React Native', 'SwiftUI', 'Swift', 'iOS'],
-  frontend: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
-  backend: ['GoLang', 'Python', 'FastAPI', 'Node.js', 'GraphQL'],
-  devops: ['AWS', 'Firebase', 'Supabase', 'PostgreSQL', 'MongoDB', 'CI/CD'],
-  ai: ['Claude Code', 'Cursor', 'MCP', 'GPT', 'Gemini'],
+  backend: ['Go', 'Node.js', 'TypeScript', 'Python', 'FastAPI', 'Django'],
+  distributed: ['Microservices', 'gRPC', 'GraphQL', 'REST API', 'Kafka', 'RabbitMQ', 'Redis', 'LLM applications'],
+  databases: ['PostgreSQL', 'MongoDB', 'DynamoDB', 'NoSQL'],
+  cloud: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'GitHub Actions', 'Jenkins', 'Azure DevOps'],
+  architecture: ['Clean Architecture', 'DDD', 'TDD', 'BDD', 'Event-Driven'],
+  observability: ['Datadog', 'Sentry', 'Grafana', 'Jest', 'PyTest', 'Mockito'],
+  frontend: ['React.js', 'Next.js', 'React Native', 'Flutter', 'Expo'],
+  ai: ['Claude Code', 'Cursor', 'MCP', 'LLM integrations', 'Agent-based workflows'],
 }
 
 export const education = [

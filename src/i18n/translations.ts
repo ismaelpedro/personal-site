@@ -42,10 +42,13 @@ export interface Translations {
   skills: {
     label: string
     tech: string
-    mobile: string
-    frontend: string
     backend: string
-    devops: string
+    distributed: string
+    databases: string
+    cloud: string
+    architecture: string
+    observability: string
+    frontend: string
     ai: string
     education: string
     languages: string
@@ -77,8 +80,8 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       greeting: 'Ismael Pedro',
-      roles: ['Software Engineer', 'Flutter Engineer', 'React/React Native Developer', 'Full Stack Developer', 'iOS Developer'],
-      bio: 'I build reliable, maintainable software across the full stack. Experienced with Java, Spring Boot, React, and cloud-native systems. Based between Brazil and Spain.',
+      roles: ['Senior Software Engineer', 'Backend Engineer (Go / Node.js)', 'Full Stack Developer', 'React/React Native Developer', 'Flutter Engineer'],
+      bio: 'I build reliable, scalable software across the full stack. Backend focus in Go and Node.js on AWS, with strong frontend and mobile delivery in React, React Native, and Flutter. Based between Brazil and Spain.',
       locationAméricas: 'Available · Brazil',
       locationEurope: 'Available · Spain',
       contactBtn: 'Contact',
@@ -90,8 +93,8 @@ export const translations: Record<Language, Translations> = {
     },
     about: {
       label: 'About',
-      bio1: 'With over 8 years of experience delivering high-impact solutions across healthcare, finance, e-commerce, fitness, and education, I specialize in building scalable, maintainable, and user-centric apps that empower users and drive real business results.',
-      bio2: 'I\'ve contributed to applications with over 5 million downloads, collaborating with renowned organizations.',
+      bio1: 'Senior Software Engineer with 8+ years building production systems at scale across fintech, healthcare, and banking. Backend focus in Go and Node.js on AWS, with strong frontend and mobile delivery in React, React Native, and Flutter.',
+      bio2: 'I own products end-to-end for distributed teams across the US, UK, and EU, with strong fundamentals in distributed systems and microservices — turning complex problems into production-ready systems that drive growth, efficiency, and real business value.',
       locationBody: 'Brazilian citizen based between Brazil and Spain. Holder of a Spanish Digital Nomad Visa, enabling full legal remote collaboration with European companies. Open to remote international roles and B2B contracts. Operating through a US LLC — payments can be arranged via traditional methods as well as BTC and USDT.',
     },
     philosophy: {
@@ -110,11 +113,14 @@ export const translations: Record<Language, Translations> = {
     skills: {
       label: 'Skills & Education',
       tech: 'Tech Skills',
-      mobile: 'Mobile',
-      frontend: 'Frontend',
       backend: 'Backend',
-      devops: 'Cloud & DevOps',
-      ai: 'AI & Tools',
+      distributed: 'Distributed Systems',
+      databases: 'Databases',
+      cloud: 'Cloud & Infra',
+      architecture: 'Architecture',
+      observability: 'Observability & Testing',
+      frontend: 'Frontend & Mobile',
+      ai: 'AI',
       education: 'Education',
       languages: 'Languages',
       proficiency: {
@@ -144,8 +150,8 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       greeting: 'Ismael Pedro',
-      roles: ['Engenheiro de Software', 'Flutter Engineer', 'Desenvolvedor React/React Native', 'Desenvolvedor Full Stack', 'Desenvolvedor iOS'],
-      bio: 'Construo software confiável e de fácil manutenção em toda a stack. Experiente com Java, Spring Boot, React e sistemas cloud-native. Entre Brasil e Espanha.',
+      roles: ['Engenheiro de Software Sênior', 'Backend Engineer (Go / Node.js)', 'Desenvolvedor Full Stack', 'Desenvolvedor React/React Native', 'Flutter Engineer'],
+      bio: 'Construo software confiável e escalável em toda a stack. Foco em backend com Go e Node.js na AWS, com forte entrega em frontend e mobile usando React, React Native e Flutter. Entre Brasil e Espanha.',
       locationAméricas: 'Disponível · Brasil',
       locationEurope: 'Disponível · Espanha',
       contactBtn: 'Contato',
@@ -157,8 +163,8 @@ export const translations: Record<Language, Translations> = {
     },
     about: {
       label: 'Sobre',
-      bio1: 'Com mais de 8 anos de experiência entregando soluções de alto impacto em saúde, finanças, e-commerce, fitness e educação, sou especializado em construir apps escaláveis, de fácil manutenção e centrados no usuário.',
-      bio2: 'Contribuí para aplicações com mais de 5 milhões de downloads, colaborando com organizações renomadas.',
+      bio1: 'Engenheiro de Software Sênior com mais de 8 anos construindo sistemas de produção em escala nos setores de fintech, saúde e bancário. Foco em backend com Go e Node.js na AWS, com forte entrega em frontend e mobile usando React, React Native e Flutter.',
+      bio2: 'Entrego produtos de ponta a ponta para times distribuídos nos EUA, Reino Unido e Europa, com sólidos fundamentos em sistemas distribuídos e microsserviços — transformando problemas complexos em sistemas prontos para produção que geram crescimento, eficiência e valor real de negócio.',
       locationBody: 'Cidadão brasileiro baseado entre Brasil e Espanha. Detentor de um Visto de Nômade Digital espanhol, permitindo colaboração remota legal com empresas europeias. Aberto a contratos internacionais remotos e B2B. Operando através de uma LLC americana — pagamentos via métodos tradicionais, BTC e USDT.',
     },
     philosophy: {
@@ -177,11 +183,14 @@ export const translations: Record<Language, Translations> = {
     skills: {
       label: 'Habilidades & Formação',
       tech: 'Tecnologias',
-      mobile: 'Mobile',
-      frontend: 'Frontend',
       backend: 'Backend',
-      devops: 'Cloud & DevOps',
-      ai: 'IA & Ferramentas',
+      distributed: 'Sistemas Distribuídos',
+      databases: 'Bancos de Dados',
+      cloud: 'Cloud & Infra',
+      architecture: 'Arquitetura',
+      observability: 'Observabilidade & Testes',
+      frontend: 'Frontend & Mobile',
+      ai: 'IA',
       education: 'Formação',
       languages: 'Idiomas',
       proficiency: {
@@ -211,8 +220,8 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       greeting: 'Ismael Pedro',
-      roles: ['Ingeniero de Software', 'Flutter Engineer', 'Desarrollador React/React Native', 'Desarrollador Full Stack', 'Desarrollador iOS'],
-      bio: 'Desarrollo software fiable y mantenible a lo largo de toda la stack. Con experiencia en Java, Spring Boot, React y sistemas cloud-native. Entre Brasil y España.',
+      roles: ['Ingeniero de Software Senior', 'Backend Engineer (Go / Node.js)', 'Desarrollador Full Stack', 'Desarrollador React/React Native', 'Flutter Engineer'],
+      bio: 'Desarrollo software fiable y escalable a lo largo de toda la stack. Enfoque en backend con Go y Node.js en AWS, con sólida entrega en frontend y mobile usando React, React Native y Flutter. Entre Brasil y España.',
       locationAméricas: 'Disponible · Brasil',
       locationEurope: 'Disponible · España',
       contactBtn: 'Contacto',
@@ -224,8 +233,8 @@ export const translations: Record<Language, Translations> = {
     },
     about: {
       label: 'Sobre mí',
-      bio1: 'Con más de 8 años de experiencia entregando soluciones de alto impacto en salud, finanzas, e-commerce, fitness y educación, me especializo en construir apps escalables, mantenibles y centradas en el usuario.',
-      bio2: 'He contribuido a aplicaciones con más de 5 millones de descargas, colaborando con organizaciones reconocidas.',
+      bio1: 'Ingeniero de Software Senior con más de 8 años construyendo sistemas de producción a escala en los sectores fintech, salud y bancario. Enfoque en backend con Go y Node.js en AWS, con sólida entrega en frontend y mobile usando React, React Native y Flutter.',
+      bio2: 'Entrego productos de extremo a extremo para equipos distribuidos en EE.UU., Reino Unido y Europa, con fuertes fundamentos en sistemas distribuidos y microservicios — transformando problemas complejos en sistemas listos para producción que impulsan el crecimiento, la eficiencia y el valor real de negocio.',
       locationBody: 'Ciudadano brasileño basado entre Brasil y España. Titular de una Visa de Nómada Digital española, que permite colaboración remota legal con empresas europeas. Abierto a contratos internacionales remotos y B2B. Operando a través de una LLC de EE.UU. — pagos vía métodos tradicionales, BTC y USDT.',
     },
     philosophy: {
@@ -244,11 +253,14 @@ export const translations: Record<Language, Translations> = {
     skills: {
       label: 'Habilidades & Educación',
       tech: 'Tecnologías',
-      mobile: 'Mobile',
-      frontend: 'Frontend',
       backend: 'Backend',
-      devops: 'Cloud & DevOps',
-      ai: 'IA & Herramientas',
+      distributed: 'Sistemas Distribuidos',
+      databases: 'Bases de Datos',
+      cloud: 'Cloud & Infra',
+      architecture: 'Arquitectura',
+      observability: 'Observabilidad & Testing',
+      frontend: 'Frontend & Mobile',
+      ai: 'IA',
       education: 'Educación',
       languages: 'Idiomas',
       proficiency: {
