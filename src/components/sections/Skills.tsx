@@ -1,7 +1,16 @@
+import type { ComponentType } from 'react'
 import { useApp } from '@/context/AppContext'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { skillGroups, education, languageProficiencies } from '@/data/skills'
 import type { LanguageProficiency } from '@/data/skills'
+import { skillIcons } from '@/data/skillIcons'
+import { FlagBR, FlagGB, FlagES } from '@/components/ui/Flags'
+
+const languageFlags: Record<string, ComponentType<{ className?: string }>> = {
+  Portuguese: FlagBR,
+  English: FlagGB,
+  Spanish: FlagES,
+}
 
 function CodeIcon() {
   return (
@@ -34,8 +43,14 @@ function GlobeIcon() {
 interface SkillChipProps { label: string }
 
 function SkillChip({ label }: SkillChipProps) {
+  const Icon = skillIcons[label]
   return (
-    <span className="inline-flex items-center px-3 py-1.5 rounded-full border border-foreground/10 bg-foreground/[0.04] text-xs text-foreground/70 hover:border-foreground/20 hover:text-foreground transition-all">
+    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-foreground/10 bg-foreground/[0.04] text-xs text-foreground/70 hover:border-foreground/20 hover:text-foreground transition-all">
+      {Icon ? (
+        <Icon className="w-3 h-3 shrink-0" aria-hidden="true" />
+      ) : (
+        <span className="w-1.5 h-1.5 rounded-full bg-foreground/25 shrink-0" aria-hidden="true" />
+      )}
       {label}
     </span>
   )
@@ -136,15 +151,19 @@ export function Skills() {
               <span className="text-sm font-semibold text-foreground">{t.skills.languages}</span>
             </div>
             <div className="p-5 space-y-4">
-              {languageProficiencies.map((lang: LanguageProficiency) => (
-                <div key={lang.level} className="flex items-center justify-between gap-3">
-                  <span className="text-sm text-foreground/60">
-                    {lang.name[language]}
-                    <span className="text-foreground/30 ml-1 text-xs">({lang.cefr})</span>
-                  </span>
-                  <DotRating filled={lang.dots} total={6} />
-                </div>
-              ))}
+              {languageProficiencies.map((lang: LanguageProficiency) => {
+                const Flag = languageFlags[lang.name.en]
+                return (
+                  <div key={lang.level} className="flex items-center justify-between gap-3">
+                    <span className="inline-flex items-center gap-2 text-sm text-foreground/60">
+                      {Flag && <Flag />}
+                      {lang.name[language]}
+                      <span className="text-foreground/30 text-xs">({lang.cefr})</span>
+                    </span>
+                    <DotRating filled={lang.dots} total={6} />
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>

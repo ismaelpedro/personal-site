@@ -1,15 +1,16 @@
-import { createContext, useContext, useMemo, useState } from 'react'
+import { createContext, useContext, useMemo } from 'react'
 import type { ReactNode } from 'react'
 import { useTheme } from '@/hooks/useTheme'
+import { useLanguage } from '@/hooks/useLanguage'
 import { translations } from '@/i18n/translations'
-import type { Language, Theme } from '@/types'
+import type { Theme } from '@/types'
 import type { Translations } from '@/i18n/translations'
 
 interface AppContextValue {
   theme: Theme
   toggleTheme: () => void
-  language: Language
-  setLanguage: (lang: Language) => void
+  language: import('@/types').Language
+  setLanguage: (lang: import('@/types').Language) => void
   t: Translations
 }
 
@@ -17,7 +18,7 @@ const AppContext = createContext<AppContextValue | null>(null)
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const { theme, toggle } = useTheme()
-  const [language, setLanguage] = useState<Language>('en')
+  const { language, setLanguage } = useLanguage()
 
   const value = useMemo<AppContextValue>(
     () => ({

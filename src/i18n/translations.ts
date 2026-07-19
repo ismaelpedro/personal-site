@@ -19,6 +19,7 @@ export interface Translations {
     downloadCV: string
     alsoAvailable: string
     openToWork: string
+    scheduleCall: string
   }
   about: {
     label: string
@@ -64,6 +65,7 @@ export interface Translations {
     subtitle: string
     copy: string
     copied: string
+    scheduleCall: string
   }
   footer: {
     version: string
@@ -90,6 +92,7 @@ export const translations: Record<Language, Translations> = {
       downloadCV: 'Download CV',
       alsoAvailable: 'Also available:',
       openToWork: 'Open to work',
+      scheduleCall: 'Schedule a call',
     },
     about: {
       label: 'About',
@@ -135,9 +138,10 @@ export const translations: Record<Language, Translations> = {
       subtitle: "I'm always open to new opportunities and conversations.",
       copy: 'Copy',
       copied: 'Copied!',
+      scheduleCall: 'Schedule a call',
     },
     footer: {
-      version: 'v1.0.0',
+      version: 'v1.0.1',
     },
   },
 
@@ -160,6 +164,7 @@ export const translations: Record<Language, Translations> = {
       downloadCV: 'Baixar CV',
       alsoAvailable: 'Também disponível:',
       openToWork: 'Aberto a oportunidades',
+      scheduleCall: 'Agendar uma call',
     },
     about: {
       label: 'Sobre',
@@ -205,9 +210,10 @@ export const translations: Record<Language, Translations> = {
       subtitle: 'Estou sempre aberto a novas oportunidades e conversas.',
       copy: 'Copiar',
       copied: 'Copiado!',
+      scheduleCall: 'Agendar uma call',
     },
     footer: {
-      version: 'v1.0.0',
+      version: 'v1.0.1',
     },
   },
 
@@ -230,6 +236,7 @@ export const translations: Record<Language, Translations> = {
       downloadCV: 'Descargar CV',
       alsoAvailable: 'También disponible:',
       openToWork: 'Abierto a oportunidades',
+      scheduleCall: 'Agendar una llamada',
     },
     about: {
       label: 'Sobre mí',
@@ -275,9 +282,10 @@ export const translations: Record<Language, Translations> = {
       subtitle: 'Siempre estoy abierto a nuevas oportunidades y conversaciones.',
       copy: 'Copiar',
       copied: '¡Copiado!',
+      scheduleCall: 'Agendar una llamada',
     },
     footer: {
-      version: 'v1.0.0',
+      version: 'v1.0.1',
     },
   },
 }

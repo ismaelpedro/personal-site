@@ -60,7 +60,7 @@ export function Footer() {
         </a>
       </div>
 
-      <p className="text-xs text-foreground/25">© {new Date().getFullYear()} · ISMAEL PEDRO · ALL RIGHTS RESERVED · {t.footer.version}</p>
+      <p className="text-xs text-foreground/25">Ismael Pedro, © {new Date().getFullYear()}. all rights reserved. · {t.footer.version}</p>
     </footer>
   )
 }
